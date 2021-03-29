@@ -20,6 +20,8 @@ void buildCombination(vector<vector<int>>& result, vector<int>& combine, int n, 
         return;
     }
 
+    // Include the current number and continue to build the rest of the 
+    // set. Once the current number is used, skip it and use next number.
     for (int i = n; i > 0; i--)
     {
         combine.push_back(i);
