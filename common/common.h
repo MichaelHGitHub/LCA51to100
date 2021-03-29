@@ -255,6 +255,13 @@ struct TD_VVC_B
     bool output;
 };
 
+struct TD_VVC_S_B
+{
+    vector<vector<char>> input;
+    string input2;
+    bool output;
+};
+
 struct TD_VVC_VVC
 {
     vector<vector<char>> input;
@@ -345,6 +352,10 @@ void CheckResults_Unorder(TD_VI_I_VVI testData, vector<vector<int>> result);
 
 void PrintInput(TD_VVC_B testData);
 void CheckResults(TD_VVC_B testData, bool result);
+
+
+void PrintInput(TD_VVC_S_B testData);
+void CheckResults(TD_VVC_S_B testData, bool result);
 
 void PrintInput(TD_VI_VI_D testData);
 void CheckResults(TD_VI_VI_D testData, double result);
