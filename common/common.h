@@ -164,6 +164,13 @@ struct TD_VI_B
     bool output;
 };
 
+struct TD_VI_I_B
+{
+    vector<int> input;
+    int input2;
+    bool output;
+};
+
 struct TD_VI_VI
 {
     vector<int> input;
@@ -323,6 +330,10 @@ void CheckResults(TD_VI_I testData, int result);
 
 void PrintInput(TD_VI_B testData);
 void CheckResults(TD_VI_B testData, bool result);
+
+void PrintInput(TD_VI_I_B testData);
+void CheckResults(TD_VI_I_B testData, bool result);
+
 
 void PrintInput(TD_VS_S testData);
 void CheckResults(TD_VS_S testData, string result);
