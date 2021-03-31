@@ -1314,7 +1314,7 @@ bool IsEqualLinkedList(ListNode* l, ListNode* r)
 
 void PrintInput(TD_L_L testData)
 {
-    std::cout << "Input1 :";
+    std::cout << "Input :";
     PrintList(testData.input);
     std::cout << endl;
 }
@@ -1331,8 +1331,9 @@ void CheckResults(TD_L_L testData, ListNode* result)
     else
     {
         std::cout << "***Failed!***" << endl;
-        std::cout << "Expect: ";
+        std::cout << "Expect: " << endl;
         PrintList(testData.output);
+        std::cout << endl;
     }
 
     std::cout << endl;
