@@ -1312,6 +1312,33 @@ bool IsEqualLinkedList(ListNode* l, ListNode* r)
     return result;
 }
 
+void PrintInput(TD_L_L testData)
+{
+    std::cout << "Input1 :";
+    PrintList(testData.input);
+    std::cout << endl;
+}
+void CheckResults(TD_L_L testData, ListNode* result)
+{
+    std::cout << "Output: ";
+    PrintList(result);
+    std::cout << endl;
+
+    if (IsEqualLinkedList(testData.output, result))
+    {
+        std::cout << "Succeeded!" << endl;
+    }
+    else
+    {
+        std::cout << "***Failed!***" << endl;
+        std::cout << "Expect: ";
+        PrintList(testData.output);
+    }
+
+    std::cout << endl;
+}
+
+
 void PrintInput(TD_L_L_L testData)
 {
     std::cout << "Input1 :";
@@ -1326,6 +1353,7 @@ void CheckResults(TD_L_L_L testData, ListNode* result)
 {
     std::cout << "Output: ";
     PrintList(result);
+    std::cout << endl;
 
     if (IsEqualLinkedList(testData.output, result))
     {

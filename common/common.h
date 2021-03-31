@@ -28,6 +28,12 @@ void PrintList(ListNode* l);
 ListNode* GenerateLinkedList(vector<int> v);
 bool IsEqualLinkedList(ListNode* l, ListNode* r);
 
+struct TD_L_L
+{
+    ListNode* input;
+    ListNode* output;
+};
+
 struct TD_L_L_L
 {
     ListNode* input;
@@ -391,6 +397,10 @@ void CheckResults(TD_VVI_VI_VVI testData, vector<vector<int>> result);
 
 void PrintInput(TD_VVC_VVC testData);
 void CheckResults(TD_VVC_VVC testData, vector<vector<char>> result);
+
+void PrintInput(TD_L_L testData);
+void CheckResults(TD_L_L testData, ListNode* result);
+
 
 void PrintInput(TD_L_L_L testData);
 void CheckResults(TD_L_L_L testData, ListNode* result);

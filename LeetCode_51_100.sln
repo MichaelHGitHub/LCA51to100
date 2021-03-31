@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "080_Remove_Dup_In_Sorted_Ar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "081_Srch_Rotated_Sorted_Array_II", "081_Srch_Rotated_Sorted_Array_II\081_Srch_Rotated_Sorted_Array_II.vcxproj", "{EE47BBFD-DDD6-4B55-A14C-880F1CFC2B8F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "082_Rm_Dup_in_Sorted_List_II", "082_Rm_Dup_in_Sorted_List_II\082_Rm_Dup_in_Sorted_List_II.vcxproj", "{353B4CA3-E72E-4C58-9B4F-170E075C4608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{EE47BBFD-DDD6-4B55-A14C-880F1CFC2B8F}.Release|x64.Build.0 = Release|x64
 		{EE47BBFD-DDD6-4B55-A14C-880F1CFC2B8F}.Release|x86.ActiveCfg = Release|Win32
 		{EE47BBFD-DDD6-4B55-A14C-880F1CFC2B8F}.Release|x86.Build.0 = Release|Win32
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Debug|x64.ActiveCfg = Debug|x64
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Debug|x64.Build.0 = Debug|x64
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Debug|x86.ActiveCfg = Debug|Win32
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Debug|x86.Build.0 = Debug|Win32
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Release|x64.ActiveCfg = Release|x64
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Release|x64.Build.0 = Release|x64
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Release|x86.ActiveCfg = Release|Win32
+		{353B4CA3-E72E-4C58-9B4F-170E075C4608}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
