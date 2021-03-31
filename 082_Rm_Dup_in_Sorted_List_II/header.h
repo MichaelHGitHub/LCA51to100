@@ -5,3 +5,4 @@
 void PrepareTestData(vector<TD_L_L>& testData);
 
 ListNode* deleteDuplicates(ListNode* head);
+ListNode* deleteDuplicates2(ListNode* head);
