@@ -183,6 +183,15 @@ struct TD_VI_VI
     vector<int> output;
 };
 
+struct TD_VI_I_VI_I_VI
+{
+    vector<int> input;
+    int input2;
+    vector<int> input3;
+    int input4;
+    vector<int> output;
+};
+
 struct TD_VVI_I
 {
     vector<vector<int>> input;
@@ -379,6 +388,9 @@ void CheckResults(TD_VI_VI_D testData, double result);
 
 void PrintInput(TD_VI_VI testData);
 void CheckResults(TD_VI_VI testData, vector<int> result);
+
+void PrintInput(TD_VI_I_VI_I_VI testData);
+void CheckResults(TD_VI_I_VI_I_VI testData, vector<int> result);
 
 void PrintInput(TD_VVI_I testData);
 void CheckResults(TD_VVI_I testData, int result);
