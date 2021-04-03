@@ -48,6 +48,14 @@ struct TD_L_I_L
     ListNode* output;
 };
 
+struct TD_L_I_I_L
+{
+    ListNode* input;
+    int input2;
+    int input3;
+    ListNode* output;
+};
+
 struct TD_S_S
 {
     string input;
@@ -428,6 +436,9 @@ void CheckResults(TD_L_L_L testData, ListNode* result);
 
 void PrintInput(TD_L_I_L testData);
 void CheckResults(TD_L_I_L testData, ListNode* result);
+
+void PrintInput(TD_L_I_I_L testData);
+void CheckResults(TD_L_I_I_L testData, ListNode* result);
 
 void PrintInput(TD_VL_L testData);
 void CheckResults(TD_VL_L testData, ListNode* result);

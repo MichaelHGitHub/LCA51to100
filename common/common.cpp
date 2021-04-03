@@ -1469,6 +1469,41 @@ void CheckResults(TD_L_I_L testData, ListNode* result)
     std::cout << endl;
 }
 
+void PrintInput(TD_L_I_I_L testData)
+{
+    std::cout << "Input1 :";
+    PrintData(testData.input);
+    std::cout << endl;
+
+    std::cout << "Input2 :";
+    PrintData(testData.input2);
+    std::cout << endl;
+
+    std::cout << "Input3 :";
+    PrintData(testData.input3);
+    std::cout << endl;
+}
+void CheckResults(TD_L_I_I_L testData, ListNode* result)
+{
+    std::cout << "Output: ";
+    PrintList(result);
+    std::cout << endl;
+
+    if (IsEqualLinkedList(testData.output, result))
+    {
+        std::cout << "Succeeded!" << endl;
+    }
+    else
+    {
+        std::cout << "***Failed!***" << endl;
+        std::cout << "Expect: ";
+        PrintList(testData.output);
+        std::cout << endl;
+    }
+
+    std::cout << endl;
+}
+
 template<typename T>
 bool AreVectorEqual(vector<T> v1, vector<T> v2)
 {
