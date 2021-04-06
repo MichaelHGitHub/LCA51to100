@@ -1,6 +1,8 @@
-#include "common.h"
 #include <iostream>
 #include <set>
+#include <queue>
+#include <stack>
+#include "common.h"
 
 using namespace std;
 
@@ -1379,6 +1381,51 @@ bool IsEqualLinkedList(ListNode* l, ListNode* r)
     return result;
 }
 
+TreeNode* GenerateTree(vector<int> v)
+{
+    if (v.size() == 0)
+    {
+        return nullptr;
+    }
+    queue< TreeNode*> nodes;
+    TreeNode* root = new TreeNode(v[0]);
+    nodes.push(root);
+
+    
+    int count = 1;
+    while(!nodes.empty())
+    {
+        TreeNode* cur = nodes.front();
+        nodes.pop();
+
+        if (count < v.size() && v[count] != NULL)
+        {
+            TreeNode* node = new TreeNode(v[count]);
+            cur->left = node;
+            nodes.push(node);
+        }
+        else
+        {
+            cur->left = nullptr;
+        }
+        ++count;
+
+        if (count < v.size() && v[count] != NULL)
+        {
+            TreeNode* node = new TreeNode(v[count]);
+            cur->right = node;
+            nodes.push(node);
+        }
+        else
+        {
+            cur->right = nullptr;
+        }
+        ++count;
+    }
+
+    return root;
+}
+
 void PrintInput(TD_L_L testData)
 {
     std::cout << "Input :";
@@ -1406,6 +1453,32 @@ void CheckResults(TD_L_L testData, ListNode* result)
     std::cout << endl;
 }
 
+void PrintInput(TD_T_VI testData)
+{
+    std::cout << "Input :";
+    PrintTree(testData.input);
+    std::cout << endl;
+}
+void CheckResults(TD_T_VI testData, vector<int> result)
+{
+    std::cout << "Output: ";
+    PrintData(result);
+    std::cout << endl;
+
+    if (testData.output == result)
+    {
+        std::cout << "Succeeded!" << endl;
+    }
+    else
+    {
+        std::cout << "***Failed!***" << endl;
+        std::cout << "Expect: " << endl;
+        PrintData(testData.output);
+        std::cout << endl;
+    }
+
+    std::cout << endl;
+}
 
 void PrintInput(TD_L_L_L testData)
 {
@@ -1625,4 +1698,29 @@ bool Are2DimensionSetEqual(vector<vector<T>> array1, vector<vector<T>> array2)
     }
 
     return true;
+}
+
+// Print out tree node in width traversal order
+void PrintTree(TreeNode* root)
+{
+    queue<TreeNode*> nodes;
+    nodes.push(root);
+
+    while (!nodes.empty())
+    {
+        root = nodes.front();
+        nodes.pop();
+
+        if (root == nullptr)
+        {
+            cout << "null" << " ";
+        }
+        else
+        {
+            cout << root->val << " ";
+            nodes.push(root->left);
+            nodes.push(root->right);
+        }
+    }
+
 }

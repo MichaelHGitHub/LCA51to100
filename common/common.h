@@ -15,6 +15,15 @@ struct ListNode
     ListNode(int x, ListNode* next) : val(x), next(next) {};
 };
 
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
+
 template<typename T>
 bool AreVectorEqual(vector<T> v1, vector<T> v2);
 
@@ -27,6 +36,9 @@ bool Are2DimensionSetEqual(vector<vector<T>> array1, vector<vector<T>> array2);
 void PrintList(ListNode* l);
 ListNode* GenerateLinkedList(vector<int> v);
 bool IsEqualLinkedList(ListNode* l, ListNode* r);
+
+TreeNode* GenerateTree(vector<int> v);
+void PrintTree(TreeNode* root);
 
 struct TD_L_L
 {
@@ -54,6 +66,12 @@ struct TD_L_I_I_L
     int input2;
     int input3;
     ListNode* output;
+};
+
+struct TD_T_VI
+{
+    TreeNode* input;
+    vector<int> output;
 };
 
 struct TD_S_S
@@ -430,6 +448,8 @@ void CheckResults(TD_VVC_VVC testData, vector<vector<char>> result);
 void PrintInput(TD_L_L testData);
 void CheckResults(TD_L_L testData, ListNode* result);
 
+void PrintInput(TD_T_VI testData);
+void CheckResults(TD_T_VI testData, vector<int> result);
 
 void PrintInput(TD_L_L_L testData);
 void CheckResults(TD_L_L_L testData, ListNode* result);
