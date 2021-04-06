@@ -74,6 +74,13 @@ struct TD_T_VI
     vector<int> output;
 };
 
+struct TD_T_T_B
+{
+    TreeNode* input;
+    TreeNode* input2;
+    bool output;
+};
+
 struct TD_S_S
 {
     string input;
@@ -450,6 +457,9 @@ void CheckResults(TD_L_L testData, ListNode* result);
 
 void PrintInput(TD_T_VI testData);
 void CheckResults(TD_T_VI testData, vector<int> result);
+
+void PrintInput(TD_T_T_B testData);
+void CheckResults(TD_T_T_B testData, bool result);
 
 void PrintInput(TD_L_L_L testData);
 void CheckResults(TD_L_L_L testData, ListNode* result);

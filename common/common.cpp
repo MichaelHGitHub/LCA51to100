@@ -1480,6 +1480,37 @@ void CheckResults(TD_T_VI testData, vector<int> result)
     std::cout << endl;
 }
 
+void PrintInput(TD_T_T_B testData)
+{
+    std::cout << "Input :";
+    PrintTree(testData.input);
+    std::cout << endl;
+
+    std::cout << "Input2 :";
+    PrintTree(testData.input2);
+    std::cout << endl;
+}
+void CheckResults(TD_T_T_B testData, bool result)
+{
+    std::cout << "Output: ";
+    PrintData(result);
+    std::cout << endl;
+
+    if (testData.output == result)
+    {
+        std::cout << "Succeeded!" << endl;
+    }
+    else
+    {
+        std::cout << "***Failed!***" << endl;
+        std::cout << "Expect: " << endl;
+        PrintData(testData.output);
+        std::cout << endl;
+    }
+
+    std::cout << endl;
+}
+
 void PrintInput(TD_L_L_L testData)
 {
     std::cout << "Input1 :";
