@@ -25,6 +25,9 @@ struct TreeNode {
 };
 
 template<typename T>
+void PrintData(T t);
+
+template<typename T>
 bool AreVectorEqual(vector<T> v1, vector<T> v2);
 
 template<typename T>
@@ -37,8 +40,11 @@ void PrintList(ListNode* l);
 ListNode* GenerateLinkedList(vector<int> v);
 bool IsEqualLinkedList(ListNode* l, ListNode* r);
 
-TreeNode* GenerateTree(vector<int> v);
 void PrintTree(TreeNode* root);
+TreeNode* GenerateTree(vector<int> v);
+bool IsSameTree(TreeNode* p, TreeNode* q);
+
+vector<TreeNode*> GenerateTrees(vector<vector<int>> v);
 
 struct TD_L_L
 {
@@ -72,6 +78,12 @@ struct TD_T_VI
 {
     TreeNode* input;
     vector<int> output;
+};
+
+struct TD_I_VT
+{
+    int input;
+    vector<TreeNode*> output;
 };
 
 struct TD_T_T_B
@@ -329,9 +341,6 @@ struct TD_VVC_VVC
     vector<vector<char>> output;
 };
 
-template<typename T>
-void PrintData(T t);
-
 void PrintInput(TD_S_S testData);
 void CheckResults(TD_S_S testData, string result);
 
@@ -457,6 +466,9 @@ void CheckResults(TD_L_L testData, ListNode* result);
 
 void PrintInput(TD_T_VI testData);
 void CheckResults(TD_T_VI testData, vector<int> result);
+
+void PrintInput(TD_I_VT testData);
+void CheckResults(TD_I_VT testData, vector<TreeNode*> result);
 
 void PrintInput(TD_T_T_B testData);
 void CheckResults(TD_T_T_B testData, bool result);
