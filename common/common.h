@@ -119,6 +119,14 @@ struct TD_S_S_I
     int output;
 };
 
+struct TD_S_S_S_B
+{
+    string input;
+    string input2;
+    string input3;
+    bool output;
+};
+
 struct TD_S_I_S
 {
     string input;
@@ -365,6 +373,9 @@ void CheckResults(TD_S_I_S testData, string result);
 
 void PrintInput(TD_S_S_B testData);
 void CheckResults(TD_S_S_B testData, bool result);
+
+void PrintInput(TD_S_S_S_B testData);
+void CheckResults(TD_S_S_S_B testData, bool result);
 
 void PrintInput(TD_S_S_S testData);
 void CheckResults(TD_S_S_S testData, string result);
