@@ -36,6 +36,9 @@
     <ClCompile Include="postorder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="solution3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">

@@ -6,3 +6,13 @@
 /.vs/LeetCode_51_100/v16
 /.vs
 /077_Combinations/077_Combinations.vcxproj.user
+*.txt
+*.tlog
+*.log
+*.obj
+*.idb
+*.pdb
+*.user
+*.exe
+*.ilk
+*.recipe

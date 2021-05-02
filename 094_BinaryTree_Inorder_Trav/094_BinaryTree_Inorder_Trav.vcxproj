@@ -145,6 +145,7 @@
     <ClCompile Include="preorder.cpp" />
     <ClCompile Include="solution.cpp" />
     <ClCompile Include="solution2.cpp" />
+    <ClCompile Include="solution3.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
