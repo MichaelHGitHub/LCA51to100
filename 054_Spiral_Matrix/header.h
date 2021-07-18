@@ -7,3 +7,5 @@ void PrepareTestData(vector<TD_VVI_VI>& testData);
 
 vector<int> spiralOrder(vector<vector<int>>& matrix);
 vector<int> spiralOrder2(vector<vector<int>>& matrix);
+
+vector<int> spiralOrder_r(vector<vector<int>>& matrix);
