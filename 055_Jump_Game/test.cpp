@@ -24,4 +24,8 @@ void PrepareTestData(vector<TD_VI_B>& testData)
     data.output = false;
     testData.push_back(data);
 
+    data.input = { 0,2,3 };
+    data.output = false;
+    testData.push_back(data);
+
 }
