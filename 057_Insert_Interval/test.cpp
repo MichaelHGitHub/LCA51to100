@@ -5,6 +5,21 @@ void PrepareTestData(vector<TD_VVI_VI_VVI>& testData)
 {
     TD_VVI_VI_VVI data;
 
+    data.input = { {0, 2},{5, 9 } };
+    data.input2 = { 3, 4 };
+    data.output = { {0, 2}, { 3, 4 }, {5, 9} };
+    testData.push_back(data);
+
+    data.input = { {0, 2},{4, 9 } };
+    data.input2 = { 6, 8 };
+    data.output = { {0, 2}, {4, 9} };
+    testData.push_back(data);
+
+    data.input = { {1, 5} };
+    data.input2 = { 0, 0 };
+    data.output = { {0, 0}, {1, 5} };
+    testData.push_back(data);
+
     data.input = { {1, 5} };
     data.input2 = { 6, 8 };
     data.output = { {1, 5}, {6, 8} };
