@@ -10,7 +10,7 @@ int main(char* args[], int argc)
     for (int i = 0; i < test_data.size(); i++)
     {
         PrintInput(test_data[i]);
-        ListNode* result = rotateRight(test_data[i].input, test_data[i].input2);
+        ListNode* result = rotateRight_r(test_data[i].input, test_data[i].input2);
 
         CheckResults(test_data[i], result);
     }
