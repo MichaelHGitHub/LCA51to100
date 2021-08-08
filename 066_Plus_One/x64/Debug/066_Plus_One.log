@@ -1,1 +1,3 @@
-﻿
+﻿  revisit.cpp
+C:\Code\GitHub\LCA51to100\066_Plus_One\revisit.cpp(8,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  066_Plus_One.vcxproj -> C:\Code\GitHub\LCA51to100\x64\Debug\066_Plus_One.exe
