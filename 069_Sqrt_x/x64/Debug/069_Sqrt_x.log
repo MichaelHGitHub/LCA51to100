@@ -1,1 +1,3 @@
-﻿
+﻿  revisit2.cpp
+C:\Code\GitHub\LCA51to100\069_Sqrt_x\revisit2.cpp(11,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  069_Sqrt_x.vcxproj -> C:\Code\GitHub\LCA51to100\x64\Debug\069_Sqrt_x.exe
