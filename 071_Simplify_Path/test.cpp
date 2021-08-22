@@ -4,6 +4,10 @@ void PrepareTestData(vector<TD_S_S>& testData)
 {
     TD_S_S data;
 
+    data.input = "/home/foo/bar/";
+    data.output = "/home/foo/bar";
+    testData.push_back(data);
+
     data.input = "/home/";
     data.output = "/home";
     testData.push_back(data);
