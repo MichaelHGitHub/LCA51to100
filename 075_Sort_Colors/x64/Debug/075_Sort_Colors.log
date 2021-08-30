@@ -1,1 +1,6 @@
-﻿
+﻿  main.cpp
+  revisit.cpp
+  revisit2.cpp
+C:\Code\GitHub\LCA51to100\075_Sort_Colors\revisit2.cpp(17,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  075_Sort_Colors.vcxproj -> C:\Code\GitHub\LCA51to100\x64\Debug\075_Sort_Colors.exe
