@@ -5,3 +5,5 @@
 void PrepareTestData(vector<TD_L_I_L>& testData);
 
 ListNode* partition(ListNode* head, int x);
+
+ListNode* partition_r(ListNode* head, int x);
