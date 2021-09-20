@@ -13,7 +13,7 @@ void PrepareTestData(vector<TD_VI_I_VI_I_VI>& testData)
 
     data.input = { 1 };
     data.input2 = 1;
-    data.input3 = {  };
+    data.input3 = { };
     data.input4 = 0;
     data.output = { 1 };
     testData.push_back(data);
