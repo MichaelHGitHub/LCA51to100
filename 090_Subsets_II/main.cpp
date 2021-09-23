@@ -9,7 +9,7 @@ int main(char* args[], int argc)
     for (int i = 0; i < test_data.size(); i++)
     {
         PrintInput(test_data[i]);
-        vector<vector<int>> result = subsetsWithDup(test_data[i].input);
+        vector<vector<int>> result = subsetsWithDup_r(test_data[i].input);
 
         CheckResults_Unorder(test_data[i], result);
     }
