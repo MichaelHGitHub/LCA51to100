@@ -4,13 +4,15 @@ void PrepareTestData(vector<TD_S_VS>& testData)
 {
     TD_S_VS data;
 
+    data.input = "25525511135";
+    data.output = { "255.255.11.135","255.255.111.35" };
+    testData.push_back(data);
+
     data.input = "0000";
     data.output = { "0.0.0.0" };
     testData.push_back(data);
 
-    data.input = "25525511135";
-    data.output = { "255.255.11.135","255.255.111.35" };
-    testData.push_back(data);
+
 
     data.input = "1111";
     data.output = { "1.1.1.1" };
