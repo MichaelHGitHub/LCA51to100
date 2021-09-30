@@ -4,6 +4,12 @@ void PrepareTestData(vector<TD_S_S_S_B>& testData)
 {
     TD_S_S_S_B data;
 
+    data.input = "aabcc";
+    data.input2 = "dbbca";
+    data.input3 = "aadbbcbcac";
+    data.output = true;
+    testData.push_back(data);
+
     data.input = "bcbccabcccbcbbbcbbacaaccccacbaccabaccbabccbabcaabbbccbbbaa";
     data.input2 = "ccbccaaccabacaabccaaccbabcbbaacacaccaacbacbbccccbac";
     data.input3 = "bccbcccabbccaccaccacbacbacbabbcbccbaaccbbaacbcbaacbacbaccaaccabcaccacaacbacbacccbbabcccccbababcaabcbbcccbbbaa";
@@ -20,12 +26,6 @@ void PrepareTestData(vector<TD_S_S_S_B>& testData)
     data.input = "";
     data.input2 = "b";
     data.input3 = "b";
-    data.output = true;
-    testData.push_back(data);
-
-    data.input = "aabcc";
-    data.input2 = "dbbca";
-    data.input3 = "aadbbcbcac";
     data.output = true;
     testData.push_back(data);
 
