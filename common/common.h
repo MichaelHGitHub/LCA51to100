@@ -5,6 +5,18 @@
 
 using namespace std;
 
+#ifdef GRAPH_NODE
+    #define Node GraphNode
+#endif
+
+#ifdef RANDOM_LIST_NODE
+    #define Node RandomListNode
+#endif
+
+#ifdef TREE_LINK_NODE
+    #define Node TreeLinkNode
+#endif
+
 //Definition for singly-linked list.
 struct ListNode
 {
@@ -24,8 +36,68 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
+
+// Definition for a Tree-Link TreeLinkNode.
+struct TreeLinkNode {
+public:
+    int val;
+    TreeLinkNode* left;
+    TreeLinkNode* right;
+    TreeLinkNode* next;
+
+    TreeLinkNode() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+    TreeLinkNode(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+    TreeLinkNode(int _val, TreeLinkNode* _left, TreeLinkNode* _right, TreeLinkNode* _next)
+        : val(_val), left(_left), right(_right), next(_next) {}
+};
+
+// Definition for a Graph TreeLinkNode.
+struct GraphNode {
+public:
+    int val;
+    vector<GraphNode*> neighbors;
+    GraphNode() {
+        val = 0;
+        neighbors = vector<GraphNode*>();
+    }
+    GraphNode(int _val) {
+        val = _val;
+        neighbors = vector<GraphNode*>();
+    }
+    GraphNode(int _val, vector<GraphNode*> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+
+
+// Definition for a Node.
+class RandomListNode {
+public:
+    int val;
+    RandomListNode* next;
+    RandomListNode* random;
+
+    RandomListNode(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+
+
+#define NULL_NODE_VALUE INT32_MIN-99
+
 template<typename T>
 void PrintData(T t);
+
+template<typename T>
+void PrintData(vector<T> v);
+
+template<>
+void PrintData(vector<int> v);
 
 template<typename T>
 bool AreVectorEqual(vector<T> v1, vector<T> v2);
@@ -40,11 +112,28 @@ void PrintList(ListNode* l);
 ListNode* GenerateLinkedList(vector<int> v);
 bool IsEqualLinkedList(ListNode* l, ListNode* r);
 
+void PrintLoopList(ListNode* l, int loop_index);
+ListNode* GenerateLoopLinkedList(vector<int> v, int loop_index);
+bool IsEqualLoopLinkedList(ListNode* l, ListNode* r);
+
 void PrintTree(TreeNode* root);
 TreeNode* GenerateTree(vector<int> v);
 bool IsSameTree(TreeNode* p, TreeNode* q);
 
+void PrintGraph(GraphNode* root);
+GraphNode* GenerateGraph(vector<vector<int>> v);
+bool AreSameGraph(GraphNode* p, GraphNode* q);
+bool AreSameAdjacentList(vector<GraphNode*> v1, vector<GraphNode*> v2);
+
 vector<TreeNode*> GenerateTrees(vector<vector<int>> v);
+
+TreeLinkNode* GenerateTreeLinkedList(vector<int> values);
+
+struct TD_N_VI
+{
+    TreeLinkNode* input;
+    vector<int> output;
+};
 
 struct TD_L_L
 {
@@ -66,6 +155,20 @@ struct TD_L_I_L
     ListNode* output;
 };
 
+struct TD_CL_L
+{
+    ListNode* input;
+    int loop_index;
+    ListNode* output;
+};
+
+struct TD_CL_B
+{
+    ListNode* input;
+    int loop_index;
+    bool output;
+};
+
 struct TD_L_I_I_L
 {
     ListNode* input;
@@ -74,10 +177,62 @@ struct TD_L_I_I_L
     ListNode* output;
 };
 
+struct TD_L_T
+{
+    ListNode* input;
+    TreeNode* output;
+};
+
+struct TD_T_I
+{
+    TreeNode* input;
+    int output;
+};
+
+struct TD_T_I_B
+{
+    TreeNode* input;
+    int input2;
+    bool output;
+};
+
+struct TD_G_G
+{
+    GraphNode* input;
+    GraphNode* output;
+};
+
+
+struct TD_VI_T
+{
+    vector<int> input;
+    TreeNode* output;
+};
+
+struct TD_VI_VI_T
+{
+    vector<int> input;
+    vector<int> input2;
+    TreeNode* output;
+};
+
 struct TD_T_VI
 {
     TreeNode* input;
     vector<int> output;
+};
+
+struct TD_T_VVI
+{
+    TreeNode* input;
+    vector<vector<int>> output;
+};
+
+struct TD_T_I_VVI
+{
+    TreeNode* input;
+    int input2;
+    vector<vector<int>> output;
 };
 
 struct TD_I_VT
@@ -86,12 +241,17 @@ struct TD_I_VT
     vector<TreeNode*> output;
 };
 
+struct TD_T_T
+{
+    TreeNode* input;
+    TreeNode* output;
+};
+
 struct TD_T_B
 {
     TreeNode* input;
     bool output;
 };
-
 
 struct TD_T_T_B
 {
@@ -161,15 +321,41 @@ struct TD_S_VS
     vector<string> output;
 };
 
+struct TD_VS_I
+{
+    vector<string> input;
+    int output;
+};
+
 struct TD_VS_S
 {
     vector<string> input;
     string output;
 };
 
+struct TD_S_VS_B
+{
+    string input;
+    vector<string> input2;
+    bool output;
+};
+
+struct TD_S_VS_VS
+{
+    string input;
+    vector<string> input2;
+    vector<string> output;
+};
+
 struct TD_VS_VVS
 {
     vector<string> input;
+    vector<vector<string>> output;
+};
+
+struct TD_S_VVS
+{
+    string input;
     vector<vector<string>> output;
 };
 
@@ -247,6 +433,13 @@ struct TD_VI_VI
 {
     vector<int> input;
     vector<int> output;
+};
+
+struct TD_VI_VI_I
+{
+    vector<int> input;
+    vector<int> input2;
+    int output;
 };
 
 struct TD_VI_I_VI_I_VI
@@ -356,6 +549,10 @@ struct TD_VVC_VVC
     vector<vector<char>> output;
 };
 
+void PrintInput(TD_N_VI data);
+void CheckResults(TD_N_VI data, TreeLinkNode* node);
+bool CheckResult(vector<int> output, TreeLinkNode* result);
+
 void PrintInput(TD_S_S testData);
 void CheckResults(TD_S_S testData, string result);
 
@@ -418,13 +615,30 @@ void CheckResults(TD_VI_B testData, bool result);
 void PrintInput(TD_VI_I_B testData);
 void CheckResults(TD_VI_I_B testData, bool result);
 
+void PrintInput(TD_VI_VI_I testData);
+void CheckResults(TD_VI_VI_I testData, int result);
+
+void PrintInput(TD_VS_I testData);
+void CheckResults(TD_VS_I testData, int result);
 
 void PrintInput(TD_VS_S testData);
 void CheckResults(TD_VS_S testData, string result);
 
+void PrintInput(TD_S_VS_B testData);
+void CheckResults(TD_S_VS_B testData, bool result);
+
+void PrintInput(TD_S_VS_VS testData);
+void CheckResults(TD_S_VS_VS testData, vector<string> result);
+void CheckResults_Unorder(TD_S_VS_VS testData, vector<string> result);
+
 void PrintInput(TD_VS_VVS testData);
 void CheckResults(TD_VS_VVS testData, vector<vector<string>> result);
 void CheckResults_Unoder(TD_VS_VVS testData, vector<vector<string>> result);
+
+void PrintInput(TD_S_VVS testData);
+void CheckResults(TD_S_VVS testData, vector<vector<string>> result);
+void CheckResults_Unoder(TD_S_VVS testData, vector<vector<string>> result);
+
 
 void PrintInput(TD_VI_I_VI testData);
 void CheckResults(TD_VI_I_VI testData, vector<int> result);
@@ -482,14 +696,46 @@ void CheckResults(TD_VVC_VVC testData, vector<vector<char>> result);
 void PrintInput(TD_L_L testData);
 void CheckResults(TD_L_L testData, ListNode* result);
 
+void PrintInput(TD_CL_B testData);
+void CheckResults(TD_CL_B testData, bool result);
+
+void PrintInput(TD_CL_L testData);
+void CheckResults(TD_CL_L testData, ListNode* result);
+
+void PrintInput(TD_L_T testData);
+void CheckResults(TD_L_T testData, TreeNode* result);
+
+void PrintInput(TD_T_I testData);
+void CheckResults(TD_T_I testData, int result);
+
+void PrintInput(TD_T_I_B testData);
+void CheckResults(TD_T_I_B testData, bool result);
+
+void PrintInput(TD_VI_VI_T testData);
+void CheckResults(TD_VI_VI_T testData, TreeNode* result);
+
+void PrintInput(TD_VI_T testData);
+void CheckResults(TD_VI_T testData, TreeNode* result);
+
 void PrintInput(TD_T_VI testData);
 void CheckResults(TD_T_VI testData, vector<int> result);
+
+void PrintInput(TD_T_VVI testData);
+void CheckResults(TD_T_VVI testData, vector<vector<int>> result);
+void CheckResults_Unorder(TD_T_VVI testData, vector<vector<int>> result);
+
+void PrintInput(TD_T_I_VVI testData);
+void CheckResults(TD_T_I_VVI testData, vector<vector<int>> result);
+void CheckResults_Unorder(TD_T_I_VVI testData, vector<vector<int>> result);
 
 void PrintInput(TD_I_VT testData);
 void CheckResults(TD_I_VT testData, vector<TreeNode*> result);
 
 void PrintInput(TD_T_B testData);
 void CheckResults(TD_T_B testData, bool result);
+
+void PrintInput(TD_T_T testData);
+void CheckResults(TD_T_T testData);
 
 void PrintInput(TD_T_T_B testData);
 void CheckResults(TD_T_T_B testData, bool result);
@@ -506,6 +752,7 @@ void CheckResults(TD_L_I_I_L testData, ListNode* result);
 void PrintInput(TD_VL_L testData);
 void CheckResults(TD_VL_L testData, ListNode* result);
 
-
+void PrintInput(TD_G_G testData);
+void CheckResults(TD_G_G testData, GraphNode* result);
 
 

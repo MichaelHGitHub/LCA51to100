@@ -81,6 +81,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "098_Valid_Binary_Srch_Tree"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "097_Interleaving_String", "097_Interleaving_String\097_Interleaving_String.vcxproj", "{ED60C86E-49CF-436C-AAE5-D9719F603580}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "099_Recover_BST", "099_Recover_BST\099_Recover_BST.vcxproj", "{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -401,6 +403,14 @@ Global
 		{ED60C86E-49CF-436C-AAE5-D9719F603580}.Release|x64.Build.0 = Release|x64
 		{ED60C86E-49CF-436C-AAE5-D9719F603580}.Release|x86.ActiveCfg = Release|Win32
 		{ED60C86E-49CF-436C-AAE5-D9719F603580}.Release|x86.Build.0 = Release|Win32
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Debug|x64.ActiveCfg = Debug|x64
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Debug|x64.Build.0 = Debug|x64
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Debug|x86.ActiveCfg = Debug|Win32
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Debug|x86.Build.0 = Debug|Win32
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Release|x64.ActiveCfg = Release|x64
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Release|x64.Build.0 = Release|x64
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Release|x86.ActiveCfg = Release|Win32
+		{65A16D2C-7ACC-4D0A-867C-CEE83653BA31}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
