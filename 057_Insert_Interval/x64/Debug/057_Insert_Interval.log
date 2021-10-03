@@ -1,2 +1,17 @@
-﻿  revisit.cpp
+﻿  common.cpp
+C:\Code\GitHub\LCA51to100\common\common.cpp(56,21): warning C4307: '-': signed integral constant overflow
+C:\Code\GitHub\LCA51to100\common\common.cpp(1597,28): warning C4805: '==': unsafe mix of type 'bool' and type 'int' in operation
+C:\Code\GitHub\LCA51to100\common\common.cpp(1904,45): warning C4307: '-': signed integral constant overflow
+C:\Code\GitHub\LCA51to100\common\common.cpp(1916,45): warning C4307: '-': signed integral constant overflow
+C:\Code\GitHub\LCA51to100\common\common.cpp(2625,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Code\GitHub\LCA51to100\common\common.cpp(2657,46): warning C4307: '-': signed integral constant overflow
+C:\Code\GitHub\LCA51to100\common\common.cpp(2679,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Code\GitHub\LCA51to100\common\common.cpp(2764,45): warning C4307: '-': signed integral constant overflow
+C:\Code\GitHub\LCA51to100\common\common.cpp(2776,45): warning C4307: '-': signed integral constant overflow
+  main.cpp
+  revisit.cpp
+  solution.cpp
+  test.cpp
+  Generating Code...
+C:\Code\GitHub\LCA51to100\common\common.cpp(237): warning C4715: 'AreVectorEqual<TreeNode *>': not all control paths return a value
   057_Insert_Interval.vcxproj -> C:\Code\GitHub\LCA51to100\x64\Debug\057_Insert_Interval.exe
